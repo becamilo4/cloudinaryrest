@@ -11,18 +11,18 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import java.util.HashMap;
-
 @Service
 public class CloudinaryService {
-    Cloudinary cloudinary;
-    private Map<String, String> ValuesMap = new HashMap<>();
+
+   Cloudinary cloudinary;
+
+    private Map<String, String> valuesMap = new HashMap<>();
 
     public CloudinaryService() {
-        ValuesMap.put("cloud name", "durqjrzug");
-        ValuesMap.put("api key", "329658256731294");
-        ValuesMap.put("api secret", "6yv6kw44PWc8NF7ij2hrL0U6cxc");
-        cloudinary = new Cloudinary(ValuesMap);
+        valuesMap.put("cloud_name", "pamtzo");
+        valuesMap.put("api_key", "791523657971866");
+        valuesMap.put("api_secret", "_uH3wLJcnQgRFUISqna_iulH3tE");
+        cloudinary = new Cloudinary(valuesMap);
     }
 
     public Map upload(MultipartFile multipartFile) throws IOException {
@@ -32,7 +32,7 @@ public class CloudinaryService {
         return result;
     }
 
-    public  Map delete(String id) throws IOException {
+    public Map delete(String id) throws IOException {
         Map result = cloudinary.uploader().destroy(id, ObjectUtils.emptyMap());
         return result;
     }

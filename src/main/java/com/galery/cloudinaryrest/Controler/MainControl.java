@@ -24,7 +24,7 @@ public class MainControl {
         return new ResponseEntity(result, HttpStatus.OK);
     }
 
-    @PostMapping("/delete/[id]")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Map> delete(@PathVariable("id") String id) throws IOException {
         Map result = cloudinaryService.delete(id);
         return new ResponseEntity(result, HttpStatus.OK);
