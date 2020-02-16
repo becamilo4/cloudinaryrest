@@ -23,7 +23,7 @@ public class Imagen {
         this.imagenUrl = imagenUrl;
         this.imagenId = imagenId;
     }
-
+    
     public String getName() {
         return name;
     }
@@ -46,5 +46,13 @@ public class Imagen {
 
     public void setImagenId(String imagenId) {
         this.imagenId = imagenId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
