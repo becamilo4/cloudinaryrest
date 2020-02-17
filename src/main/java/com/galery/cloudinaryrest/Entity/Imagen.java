@@ -23,7 +23,11 @@ public class Imagen {
         this.imagenUrl = imagenUrl;
         this.imagenId = imagenId;
     }
-    
+
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
@@ -36,6 +40,10 @@ public class Imagen {
         return imagenId;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -46,13 +54,5 @@ public class Imagen {
 
     public void setImagenId(String imagenId) {
         this.imagenId = imagenId;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }

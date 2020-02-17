@@ -17,9 +17,7 @@ public class ImagenService{
     @Autowired
     ImagenRepository imagenRepository;
 
-    public List<Imagen> list(){
-        return imagenRepository.findByOrderById();
-    }
+    public List<Imagen> list(){ return imagenRepository.findByOrderById(); }
 
     public Optional<Imagen> getOne(int id){
         return imagenRepository.findById(id);
