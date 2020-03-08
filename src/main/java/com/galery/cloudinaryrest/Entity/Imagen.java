@@ -10,18 +10,49 @@ public class Imagen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private int precio;
+    private String description;
+    private int peso;
     private String name;
     private String imagenUrl;
+
     private String imagenId;
 
     public Imagen(){
 
     }
 
-    public Imagen(String name, String imagenUrl, String imagenId) {
+    public Imagen(String name, String imagenUrl, String imagenId, int precio, String description, int peso) {
         this.name = name;
         this.imagenUrl = imagenUrl;
         this.imagenId = imagenId;
+        this.precio = precio;
+        this.description = description;
+        this.peso = peso;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
     public int getId() {
